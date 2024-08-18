@@ -22,7 +22,7 @@ document.getElementById('calculator-form').addEventListener('submit', function (
       carwashMinutes,
       otherLiters
   );
-  document.getElementById('result').textContent = Your daily water footprint is approximately ${waterFootprint.toFixed(2)} liters.;
+  document.getElementById('result').textContent = `Your daily water footprint is approximately ${waterFootprint.toFixed(2)} liters.`;
   const ctx = document.getElementById('waterFootprintChart').getContext('2d');
   new Chart(ctx, {
       type: 'bar',
@@ -78,6 +78,7 @@ document.getElementById('calculator-form').addEventListener('submit', function (
       }
   });
 });
+
 function calculateWaterFootprint(
   showerMinutes,
   dishwasherLoads,
@@ -99,6 +100,7 @@ function calculateWaterFootprint(
   const drinkingFactor = 1;
   const cleaningFactor = 2;
   const carwashFactor = 20;
+
   const showerFootprint = showerMinutes * showerFactor;
   const dishwasherFootprint = dishwasherLoads * dishwasherFactor;
   const laundryFootprint = laundryLoads * laundryFactor;
@@ -109,6 +111,7 @@ function calculateWaterFootprint(
   const cleaningFootprint = cleaningMinutes * cleaningFactor;
   const carwashFootprint = carwashMinutes * carwashFactor;
   const otherFootprint = otherLiters;
+
   const totalFootprint = showerFootprint +
       dishwasherFootprint +
       laundryFootprint +
