@@ -37,7 +37,7 @@ main {
 }
 .swiper-container {
     width: 100%;
-
+    padding: 20px 0;
 }
 .swiper-slide {
     display: flex;
@@ -69,7 +69,6 @@ main {
 }
 .tip-text {
     max-width: 600px;
-    color: #ffffff;
 }
 .tip h2 {
     color: #0a0a0a;
@@ -141,8 +140,4 @@ main {
     .tip p {
         font-size: 0.9em;
     }
-.swiper-slide tip swiper-slide-active {
-width: 100%;
-margin-right: 0;
-}
 }
